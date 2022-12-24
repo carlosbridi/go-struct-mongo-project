@@ -15,6 +15,6 @@ var userRoutes = []Routes{
 	{
 		URI:      "/customer",
 		Method:   http.MethodPost,
-		Function: controllers.HelloWorld,
+		Function: controllers.AddCustomer,
 	},
 }

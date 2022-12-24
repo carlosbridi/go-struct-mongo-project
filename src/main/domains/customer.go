@@ -1,8 +1,8 @@
 package domains
 
 type Customer struct {
-	Id      string
-	Name    string
-	Address string
-	Active  bool
+	Id      string `json:"id,omitempty"`
+	Name    string `json:"name,omitempty"`
+	Address string `json:"address,omitempty"`
+	Active  bool   `json:"active,omitempty"`
 }
