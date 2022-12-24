@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
+	"go_sample/src/routes"
 	"log"
-	"main/src/main/config"
-	"main/src/routes"
 	"net/http"
+
+	configurations_yaml "go_sample/src/main/config/yaml"
 )
 
 func main() {
 	r := routes.GenerateRoutes()
-	fmt.Println("Hello!!")
 
-	log.Printf("Escutando na porta %d", config.Porta)
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", config.Porta), r))
+	log.Printf("Escutando na porta %s", configurations_yaml.GetBeanPropertyByName("Application.Port"))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", configurations_yaml.GetBeanPropertyByName("Application.Port")), r))
 }

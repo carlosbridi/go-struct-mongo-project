@@ -1,0 +1,9 @@
+# Application Properties
+Application.Port:
+  value: 9000
+
+# MongoDB Properties
+MongoDB.URI:
+  value: mongodb://localhost:27017
+MongoDB.DatabaseName:
+  value: go-local-app

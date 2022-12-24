@@ -1,7 +1,7 @@
 package documents
 
 import (
-	"main/src/main/domains"
+	"go_sample/src/main/domains"
 	"time"
 )
 

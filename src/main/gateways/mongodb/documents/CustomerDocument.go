@@ -1,12 +1,12 @@
 package documents
 
-import "main/src/main/domains"
+import "go_sample/src/main/domains"
 
 type CustomerDocument struct {
-	Id      string
-	Name    string
-	Address string
-	Active  bool
+	Id      string `json:"id"`
+	Name    string `json:"name"`
+	Address string `json:"adress"`
+	Active  bool   `json:"active"`
 }
 
 func ToDocument(customer domains.Customer) CustomerDocument {
